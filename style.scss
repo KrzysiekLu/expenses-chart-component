@@ -1,0 +1,107 @@
+:root {
+  --top-header-bg: hsl(10, 79%, 65%);
+  --body-bg: hsl(27, 66%, 92%);
+  --chart-container-bg: hsl(33, 100%, 98%);
+  --primary-font-color: hsl(25, 47%, 15%);
+  --secondary-font-color: hsl(28, 10%, 53%);
+  --hover-efect-color: hsl(186, 34%, 60%);
+}
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--body-bg);
+}
+
+.main-header {
+  margin-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  color: white;
+  width: 95vw;
+  background-color: var(--top-header-bg);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &__info {
+    display: flex;
+    flex-direction: column;
+    .info__balance {
+      margin-top: 0.5rem;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+  }
+}
+.expenses-chart {
+  width: 95vw;
+  background-color: var(--chart-container-bg);
+  color: var(--primary-font-color);
+  font-weight: 700;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .chart-title {
+    margin-bottom: 40px;
+  }
+
+  .chart {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--body-bg);
+
+    &__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__bar {
+        min-width: 36px;
+        border-radius: 5px;
+        height: 50px;
+        background-color: var(--top-header-bg);
+        margin-bottom: 0.6rem;
+        transition: 0.3s background-color ease;
+
+        &:hover {
+          background-color: var(--hover-efect-color);
+        }
+      }
+      &__label {
+        font-size: 10px;
+        color: var(--secondary-font-color);
+        margin-bottom: 20px;
+      }
+      &__popup {
+        padding: 7px;
+        background-color: var(--primary-font-color);
+
+        border-radius: 4px;
+        color: white;
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transform: translateY(-35px);
+
+        // display: none;
+      }
+    }
+  }
+}

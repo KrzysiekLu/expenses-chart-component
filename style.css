@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --top-header-bg: hsl(10, 79%, 65%);
+  --body-bg: hsl(27, 66%, 92%);
+  --chart-container-bg: hsl(33, 100%, 98%);
+  --primary-font-color: hsl(25, 47%, 15%);
+  --secondary-font-color: hsl(28, 10%, 53%);
+  --hover-efect-color: hsl(186, 34%, 60%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "DM Sans", sans-serif;
+  background-color: var(--body-bg);
+}
+
+.main-header {
+  margin-bottom: 1.5rem;
+  border-radius: 0.8rem;
+  color: white;
+  width: 95vw;
+  background-color: var(--top-header-bg);
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-header__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main-header__info .info__balance {
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.expenses-chart {
+  width: 95vw;
+  background-color: var(--chart-container-bg);
+  color: var(--primary-font-color);
+  font-weight: 700;
+  border-radius: 0.8rem;
+  padding: 1.5rem;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.expenses-chart .chart-title {
+  margin-bottom: 40px;
+}
+
+.expenses-chart .chart {
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 2px solid var(--body-bg);
+}
+
+.expenses-chart .chart__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.expenses-chart .chart__element__bar {
+  min-width: 36px;
+  border-radius: 5px;
+  height: 50px;
+  background-color: var(--top-header-bg);
+  margin-bottom: 0.6rem;
+  -webkit-transition: 0.3s background-color ease;
+  transition: 0.3s background-color ease;
+}
+
+.expenses-chart .chart__element__bar:hover {
+  background-color: var(--hover-efect-color);
+}
+
+.expenses-chart .chart__element__label {
+  font-size: 10px;
+  color: var(--secondary-font-color);
+  margin-bottom: 20px;
+}
+
+.expenses-chart .chart__element__popup {
+  padding: 7px;
+  background-color: var(--primary-font-color);
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  -webkit-transform: translateY(-35px);
+          transform: translateY(-35px);
+}
+/*# sourceMappingURL=style.css.map */
