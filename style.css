@@ -35,12 +35,12 @@ body {
 }
 
 .main-header {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   border-radius: 0.8rem;
   color: white;
   width: 95vw;
   background-color: var(--top-header-bg);
-  padding: 1rem;
+  padding: 1.5rem 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,6 +53,8 @@ body {
 }
 
 .main-header__info {
+  font-size: 1rem;
+  font-weight: 400;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,7 +66,7 @@ body {
 
 .main-header__info .info__balance {
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
@@ -74,7 +76,7 @@ body {
   color: var(--primary-font-color);
   font-weight: 700;
   border-radius: 0.8rem;
-  padding: 1.5rem;
+  padding: 1.5rem 1rem;
   font-size: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -90,6 +92,7 @@ body {
 
 .expenses-chart .chart-title {
   margin-bottom: 40px;
+  font-size: 1.55rem;
 }
 
 .expenses-chart .chart {
@@ -122,7 +125,7 @@ body {
 
 .expenses-chart .chart__element__bar {
   min-width: 36px;
-  border-radius: 5px;
+  border-radius: 3px;
   height: 50px;
   background-color: var(--top-header-bg);
   margin-bottom: 0.6rem;
@@ -131,11 +134,16 @@ body {
 }
 
 .expenses-chart .chart__element__bar:hover {
+  opacity: 0.8;
+}
+
+.expenses-chart .chart__element__bar:active {
   background-color: var(--hover-efect-color);
 }
 
 .expenses-chart .chart__element__label {
-  font-size: 10px;
+  font-size: 0.75rem;
+  font-weight: 400;
   color: var(--secondary-font-color);
   margin-bottom: 20px;
 }
@@ -145,7 +153,7 @@ body {
   background-color: var(--primary-font-color);
   border-radius: 4px;
   color: white;
-  font-size: 12px;
+  font-size: 0.8rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -158,5 +166,92 @@ body {
   position: absolute;
   -webkit-transform: translateY(-35px);
           transform: translateY(-35px);
+  -webkit-transition: 0.5s all ease;
+  transition: 0.5s all ease;
+  opacity: 0;
+}
+
+.expenses-chart .chart .show-popup {
+  opacity: 1;
+}
+
+.expenses-chart .summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.expenses-chart .summary__this-month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-top: 1.5rem;
+}
+
+.expenses-chart .summary__this-month .title {
+  font-size: 1rem;
+  color: var(--secondary-font-color);
+  font-weight: 400;
+}
+
+.expenses-chart .summary__this-month .amount {
+  font-size: 2rem;
+}
+
+.expenses-chart .summary__last-month,
+.expenses-chart .summary .last-month {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.expenses-chart .summary__last-month__diffrence,
+.expenses-chart .summary .last-month__diffrence {
+  font-size: 1rem;
+}
+
+.expenses-chart .summary__last-month__title,
+.expenses-chart .summary .last-month__title {
+  font-size: 1rem;
+  color: var(--secondary-font-color);
+  font-weight: 400;
+}
+
+.attribution {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 400px) {
+  .main-header {
+    max-width: 400px;
+    -webkit-transition: 0.5s all ease;
+    transition: 0.5s all ease;
+  }
+  .expenses-chart {
+    max-width: 400px;
+    -webkit-transition: 1s all ease;
+    transition: 1s all ease;
+  }
 }
 /*# sourceMappingURL=style.css.map */

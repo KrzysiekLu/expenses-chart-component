@@ -15,38 +15,40 @@
     <script src="script.js" defer type="module"></script>
 
     <title>Frontend Mentor | Expenses chart component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <header class="main-header">
-      <div class="main-header__info">
+      <h1 class="main-header__info">
         My balance <span class="info__balance">$921.48</span>
-      </div>
+      </h1>
       <img src="images/logo.svg" alt="" />
     </header>
     <main class="expenses-chart">
-      <span class="chart-title">Spending - Last 7 days</span>
+      <h2 class="chart-title">Spending - Last 7 days</h2>
 
       <div class="chart"></div>
-    </main>
 
-    mon tue wed thu fri sat sun Total this month $478.33 +2.4% from last month
+      <section class="summary">
+        <div class="summary__this-month">
+          <h2 class="this-mounth__title title">Total this month</h2>
+          <div class="this-month__amount amount">$478.33</div>
+        </div>
+        <div class="summary__last-month last-month">
+          <div class="last-month__diffrence">+2.4%</div>
+          <h2 class="last-month__title">from last month</h2>
+        </div>
+      </section>
+    </main>
 
     <div class="attribution">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io/challenges/expenses-chart-component-e7yJBUdjwt/hub/expenses-chart-component--kjY7eDFXu"
+        target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by
+      <a href="https://www.frontendmentor.io/profile/KrzysiekLu">@KrzysiekLu</a
+      >.
     </div>
   </body>
 </html>

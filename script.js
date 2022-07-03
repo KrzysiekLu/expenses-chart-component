@@ -6,10 +6,8 @@ const getData = async (path) => {
 };
 
 const data = await getData("./data.json");
-console.log(data);
 
 const chart = document.querySelector(".chart");
-console.log(chart);
 
 const createChart = () => {
   data.forEach((el) => {
@@ -29,11 +27,20 @@ const createChart = () => {
     (popUp, index) => (popUp.textContent = `$${data[index].amount}`)
   );
 
-  bars.forEach(
-    (el, index) => (el.style.height = `${data[index].amount * 2.5}px`)
-  );
   labels.forEach((label, index) => {
     label.textContent = data[index].day;
+  });
+  bars.forEach(
+    (el, index) => (el.style.height = `${data[index].amount * 3}px`)
+  );
+
+  bars.forEach((el) => {
+    el.addEventListener("mousemove", (e) => {
+      e.target.previousSibling.previousElementSibling.style.opacity = "1";
+    });
+    el.addEventListener("mouseleave", (e) => {
+      e.target.previousSibling.previousElementSibling.style.opacity = "0";
+    });
   });
 };
 createChart();
