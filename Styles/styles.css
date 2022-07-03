@@ -8,13 +8,6 @@
   --hover-efect-color: hsl(186, 34%, 60%);
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
 body {
   height: 100vh;
   display: -webkit-box;
@@ -32,6 +25,13 @@ body {
           flex-direction: column;
   font-family: "DM Sans", sans-serif;
   background-color: var(--body-bg);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .main-header {
@@ -175,7 +175,7 @@ body {
   opacity: 1;
 }
 
-.expenses-chart .summary {
+.summary {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +184,8 @@ body {
           justify-content: space-between;
 }
 
-.expenses-chart .summary__this-month {
+.summary__this-month,
+.summary .this-month {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,18 +199,20 @@ body {
   margin-top: 1.5rem;
 }
 
-.expenses-chart .summary__this-month .title {
+.summary__this-month__title,
+.summary .this-month__title {
   font-size: 1rem;
   color: var(--secondary-font-color);
   font-weight: 400;
 }
 
-.expenses-chart .summary__this-month .amount {
+.summary__this-month__amount,
+.summary .this-month__amount {
   font-size: 2rem;
 }
 
-.expenses-chart .summary__last-month,
-.expenses-chart .summary .last-month {
+.summary__last-month,
+.summary .last-month {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,13 +228,13 @@ body {
           justify-content: flex-end;
 }
 
-.expenses-chart .summary__last-month__diffrence,
-.expenses-chart .summary .last-month__diffrence {
+.summary__last-month__diffrence,
+.summary .last-month__diffrence {
   font-size: 1rem;
 }
 
-.expenses-chart .summary__last-month__title,
-.expenses-chart .summary .last-month__title {
+.summary__last-month__title,
+.summary .last-month__title {
   font-size: 1rem;
   color: var(--secondary-font-color);
   font-weight: 400;
@@ -254,4 +257,4 @@ body {
     transition: 1s all ease;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=styles.css.map */

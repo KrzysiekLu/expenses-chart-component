@@ -1,0 +1,68 @@
+.expenses-chart {
+  width: 95vw;
+  background-color: var(--chart-container-bg);
+  color: var(--primary-font-color);
+  font-weight: 700;
+  border-radius: 0.8rem;
+  padding: 1.5rem 1rem;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  .chart-title {
+    margin-bottom: 40px;
+    font-size: 1.55rem;
+  }
+  .chart {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    border-bottom: 2px solid var(--body-bg);
+
+    &__element {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &__bar {
+        min-width: 36px;
+        border-radius: 3px;
+        height: 50px;
+        background-color: var(--top-header-bg);
+        margin-bottom: 0.6rem;
+        transition: 0.3s background-color ease;
+        &:hover {
+          opacity: 0.8;
+        }
+        &:active {
+          background-color: var(--hover-efect-color);
+        }
+      }
+      &__label {
+        font-size: 0.75rem;
+        font-weight: 400;
+        color: var(--secondary-font-color);
+        margin-bottom: 20px;
+      }
+      &__popup {
+        padding: 7px;
+        background-color: var(--primary-font-color);
+
+        border-radius: 4px;
+        color: white;
+        font-size: 0.8rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        transform: translateY(-35px);
+        transition: 0.5s all ease;
+        opacity: 0;
+      }
+    }
+    .show-popup {
+      opacity: 1;
+    }
+  }
+}

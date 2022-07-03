@@ -1,0 +1,23 @@
+.main-header {
+    margin-bottom: 1rem;
+  
+    border-radius: 0.8rem;
+    color: white;
+    width: 95vw;
+    background-color: var(--top-header-bg);
+    padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__info {
+      font-size: 1rem;
+      font-weight: 400;
+      display: flex;
+      flex-direction: column;
+      .info__balance {
+        margin-top: 0.5rem;
+        font-size: 1.6rem;
+        font-weight: 700;
+      }
+    }
+  }
